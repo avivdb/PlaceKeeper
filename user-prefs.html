@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Settings</title>
+    <link rel="stylesheet" href="css/user-prefs.css">
+</head>
+
+<body>
+
+    <h2>User Settings</h2>
+
+    <form id="user-prefs-form" onsubmit="onSubmit(event)">
+
+        <section class="email-input">
+            <label for="eMail">E-Mail</label>
+            <input type="text" id="eMail" placeholder="Insert your email here" name="email" required>
+        </section>
+
+        <section class="age-input">
+            <label for="age">Age: <span class="age-display"></span></label>
+            <input oninput="onRange(this.value)" type="range" id="age" min="18" max="120" name="Age">
+        </section>
+
+        <h3>Colors</h3>
+
+        <section>
+            <label for="backgroundColor">Set Background Color</label>
+            <input type="color" id="backgroundColor" name="bgColor">
+        </section>
+
+        <section>
+            <label for="textColor">Set Text Color</label>
+            <input type="color" id="textColor" name="txtColor">
+        </section>
+
+        <section>
+            <label for="birthDate" id="birthDate">Birth Date</label>
+            <input type="date" id="birthDate" name="birthDate">
+        </section>
+
+        <section>
+            <label for="birthTime" id="birthTime">Birth Time</label>
+            <input type="time" id="birthTime" name="birthTime">
+        </section>
+
+        <button type="submit">Set</button>
+    </form>
+    <script src="js/storageService.js"></script>
+    <script src="js/userService.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+
+</html>
